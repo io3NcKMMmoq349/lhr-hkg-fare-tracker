@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LHR → HKG Fare Tracker</title><script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:#0b1020;color:#eef2ff}.wrap{max-width:1120px;margin:auto;padding:32px 18px}.top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.muted{color:#9ca9c7}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:22px 0}.card{background:#121a2f;border:1px solid #263453;border-radius:18px;padding:18px}.label{font-size:13px;color:#9ca9c7}.metric{font-size:28px;font-weight:700;margin-top:8px}.two{display:grid;grid-template-columns:2fr 1fr;gap:14px}.chart{height:360px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:11px 8px;border-bottom:1px solid #263453;text-align:left}th{color:#b9c5df;font-size:12px}.pill{padding:4px 8px;border:1px solid #263453;border-radius:999px}.good{color:#39d98a}.warn{color:#ffcf5c}.bad{color:#ff6b6b}a{color:#9fc0ff}@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}@media(max-width:520px){.grid{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<div class="top"><div><h1>LHR → HKG Fare Tracker</h1><div class="muted">London Heathrow to Hong Kong · April 2027 departures · 55–70 day stays · Economy</div></div><div id="updated" class="muted">Loading…</div></div>
+<div class="grid">
+<div class="card"><div class="label">Cheapest observed fare</div><div id="cheapest" class="metric">—</div></div>
+<div class="card"><div class="label">Best nonstop fare</div><div id="direct" class="metric">—</div></div>
+<div class="card"><div class="label">Best trip dates</div><div id="dates" class="metric" style="font-size:19px">—</div></div>
+<div class="card"><div class="label">Days tracked</div><div id="days" class="metric">—</div></div>
+</div>
+<div class="two"><div class="card"><h2>Price trend</h2><div class="chart"><canvas id="trend"></canvas></div></div>
+<div class="card"><h2>Booking guide</h2><p class="good">● Under £500 — excellent</p><p class="good">● £500–£600 — very good</p><p class="warn">● £600–£700 nonstop — good</p><p class="bad">● Above £800 — usually wait</p></div></div>
+<div class="card" style="margin-top:14px"><h2>Daily fare observations</h2><div style="overflow:auto"><table><thead><tr><th>Checked</th><th>Fare</th><th>Airline</th><th>Dates</th><th>Routing</th><th>Source</th></tr></thead><tbody id="rows"></tbody></table></div></div>
+<p class="muted" style="font-size:12px">Fares are observations, not guarantees. Prices can change at any time and may vary by baggage, fare family, payment method, or availability.</p>
+</div><script>
+(async()=>{const r=await fetch('./fares.json',{cache:'no-store'}),d=await r.json(),o=d.observations||[];
+const min=o.length?Math.min(...o.map(x=>x.price_gbp)):null,dirs=o.filter(x=>x.stops===0),bd=dirs.length?Math.min(...dirs.map(x=>x.price_gbp)):null,b=o.find(x=>x.price_gbp===min);
+cheapest.textContent=min?'£'+min:'—';direct.textContent=bd?'£'+bd:'—';dates.textContent=b?b.departure+' → '+b.return:'—';days.textContent=new Set(o.map(x=>x.checked_at.slice(0,10))).size;updated.textContent=d.updated_at?'Last updated: '+d.updated_at:'';
+rows.innerHTML=[...o].reverse().map(x=>`<tr><td>${x.checked_at}</td><td><b>£${x.price_gbp}</b></td><td>${x.airline}</td><td>${x.departure}<br><span class="muted">${x.return}</span></td><td><span class="pill">${x.stops===0?'Nonstop':x.stops+' stop'}</span></td><td>${x.url?'<a target="_blank" rel="noopener" href="'+x.url+'">'+x.source+'</a>':x.source}</td></tr>`).join('');
+const g={};o.forEach(x=>{const k=x.checked_at.slice(0,10);g[k]??={all:Infinity,direct:Infinity};g[k].all=Math.min(g[k].all,x.price_gbp);if(x.stops===0)g[k].direct=Math.min(g[k].direct,x.price_gbp)});const labels=Object.keys(g).sort();
+new Chart(document.getElementById('trend'),{type:'line',data:{labels,datasets:[{label:'Cheapest',data:labels.map(k=>g[k].all)},{label:'Best nonstop',data:labels.map(k=>g[k].direct===Infinity?null:g[k].direct)}]},options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#cbd5ec'}}},scales:{x:{ticks:{color:'#94a3c0'}},y:{ticks:{color:'#94a3c0',callback:v=>'£'+v}}}}});})().catch(()=>updated.textContent='Could not load fare data');
+</script></body></html>
