@@ -2,11 +2,77 @@
   "route": "LHR-HKG",
   "trip_window": "Depart April 1-30, 2027; return approximately 55-70 days later",
   "currency": "GBP",
-  "updated_at": "2026-10-06 09:06 HKT",
+  "updated_at": "2026-10-06 13:58 HKT",
   "observations": [
-    {"checked_at":"2026-10-05","price_gbp":632,"airline":"British Airways","departure":"2027-04-07","return":"Indicative / shorter-trip fare","stops":0,"source":"KAYAK","url":"https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"},
-    {"checked_at":"2026-10-05","price_gbp":662,"airline":"Cathay Pacific","departure":"2027-03-18","return":"2027-04-14","stops":0,"source":"Cathay Pacific","url":"https://flights.cathaypacific.com/destinations/en_GB/flights-from-london-to-hong-kong"},
-    {"checked_at":"2026-10-06 09:00 HKT","price_gbp":653,"airline":"British Airways","departure":"2027-04-16","return":"2027-04-25","stops":0,"source":"KAYAK — benchmark only; stay shorter than 55–70 days","url":"https://www.kayak.co.uk/flight-routes/London-Heathrow-LHR/Hong-Kong-Intl-HKG"},
-    {"checked_at":"2026-10-06 09:00 HKT","price_gbp":374,"airline":"Air China","departure":"2027-04-17","return":"2027-05-07","stops":1,"source":"KAYAK — benchmark only; stay shorter than 55–70 days","url":"https://www.kayak.co.uk/flight-routes/London-Heathrow-LHR/Hong-Kong-Intl-HKG"}
+    {
+      "checked_at": "2026-10-05",
+      "price_gbp": 632,
+      "airline": "British Airways",
+      "departure": "2027-04-07",
+      "return": "Indicative / shorter-trip fare",
+      "stops": 0,
+      "source": "KAYAK",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-05",
+      "price_gbp": 662,
+      "airline": "Cathay Pacific",
+      "departure": "2027-03-18",
+      "return": "2027-04-14",
+      "stops": 0,
+      "source": "Cathay Pacific",
+      "url": "https://flights.cathaypacific.com/destinations/en_GB/flights-from-london-to-hong-kong"
+    },
+    {
+      "checked_at": "2026-10-06 09:00 HKT",
+      "price_gbp": 653,
+      "airline": "British Airways",
+      "departure": "2027-04-16",
+      "return": "2027-04-25",
+      "stops": 0,
+      "source": "KAYAK — benchmark only; stay shorter than 55–70 days",
+      "url": "https://www.kayak.co.uk/flight-routes/London-Heathrow-LHR/Hong-Kong-Intl-HKG"
+    },
+    {
+      "checked_at": "2026-10-06 09:00 HKT",
+      "price_gbp": 374,
+      "airline": "Air China",
+      "departure": "2027-04-17",
+      "return": "2027-05-07",
+      "stops": 1,
+      "source": "KAYAK — benchmark only; stay shorter than 55–70 days",
+      "url": "https://www.kayak.co.uk/flight-routes/London-Heathrow-LHR/Hong-Kong-Intl-HKG"
+    },
+    {
+      "checked_at": "2026-10-06 13:58 HKT",
+      "price_gbp": 374,
+      "airline": "Air China",
+      "departure": "2027-04-15",
+      "return": "2027-05-13",
+      "stops": 1,
+      "source": "KAYAK — benchmark only; 28-day stay, shorter than 55–70 days",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-06 13:58 HKT",
+      "price_gbp": 632,
+      "airline": "British Airways",
+      "departure": "2027-04-07",
+      "return": "2027-04-26",
+      "stops": 0,
+      "source": "KAYAK — benchmark only; 19-day stay, shorter than 55–70 days",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-06 13:58 HKT",
+      "price_gbp": 1003,
+      "airline": "Thai Airways",
+      "departure": "2027-04-09",
+      "return": "2027-04-17",
+      "stops": 1,
+      "source": "Thai Airways — benchmark only; 8-day stay, shorter than 55–70 days",
+      "url": "https://www.thaiairways.com/flights/en/flights-from-london-to-hong-kong"
+    }
   ]
 }
