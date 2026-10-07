@@ -2,7 +2,7 @@
   "route": "LHR-HKG",
   "trip_window": "Depart April 1-30, 2027; return approximately 55-70 days later",
   "currency": "GBP",
-  "updated_at": "2026-10-07 20:00 HKT",
+  "updated_at": "2026-10-08 07:58 HKT",
   "observations": [
     {
       "checked_at": "2026-10-05",
@@ -93,6 +93,16 @@
       "stops": 0,
       "source": "GetAFlight — benchmark only; 13-night stay, shorter than target; offer age 13 minutes and subject to availability",
       "url": "https://www.getaflight.co.uk/offer/55/flight-599079206"
+    },
+    {
+      "checked_at": "2026-10-08 07:58 HKT",
+      "price_gbp": 333,
+      "airline": "Unspecified",
+      "departure": "2027-04-14",
+      "return": "2027-06-23",
+      "stops": null,
+      "source": "FlightsFinder - provisional London-area fare, airport/airline/stops not verified; 70 days; indicative only",
+      "url": "https://www.flightsfinder.com/en-gb/flights-hong-kong"
     }
   ]
 }
