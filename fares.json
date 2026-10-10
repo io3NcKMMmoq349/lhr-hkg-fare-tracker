@@ -2,7 +2,7 @@
   "route": "LHR-HKG",
   "trip_window": "Depart April 1-30, 2027; return approximately 55-70 days later",
   "currency": "GBP",
-  "updated_at": "2026-10-09 01:58 HKT",
+  "updated_at": "2026-10-11 01:57 HKT",
   "observations": [
     {
       "checked_at": "2026-10-05",
@@ -182,6 +182,66 @@
       "return": "2027-07-02",
       "stops": null,
       "source": "FlightsFinder — provisional London-area benchmark only; 81-day stay (not 55–70); LHR airport, airline, routing and bookability unverified",
+      "url": "https://www.flightsfinder.com/en-gb/flights-hong-kong"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 369,
+      "airline": "Air China",
+      "departure": "2027-04-24",
+      "return": "2027-06-02",
+      "stops": 1,
+      "source": "KAYAK — NON-QUALIFYING BENCHMARK; 39-day stay; LHR-HKG, 1 stop each way via Chengdu; 34h55m outbound, 33h45m inbound; recently listed, not checkout-verified",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 373,
+      "airline": "Air China",
+      "departure": "2027-04-12",
+      "return": "2027-05-17",
+      "stops": 1,
+      "source": "KAYAK — NON-QUALIFYING BENCHMARK; 35-day stay; LHR-HKG, 1 stop each way; 15h25m outbound, 37h55m inbound; recently listed, not checkout-verified",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 631,
+      "airline": "British Airways",
+      "departure": "2027-04-26",
+      "return": "2027-05-10",
+      "stops": 0,
+      "source": "KAYAK — NON-QUALIFYING BENCHMARK; 14-day stay; LHR-HKG nonstop each way; recently listed, not checkout-verified",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 636,
+      "airline": "British Airways",
+      "departure": "2027-04-07",
+      "return": "2027-04-26",
+      "stops": 0,
+      "source": "KAYAK — NON-QUALIFYING BENCHMARK; 19-day stay; LHR-HKG nonstop each way; recently listed, not checkout-verified",
+      "url": "https://www.kayak.co.uk/flight-routes/United-Kingdom-GB0/Hong-Kong-Intl-HKG.April.M04.ksp"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 334,
+      "airline": "Unspecified",
+      "departure": "2027-04-29",
+      "return": "2027-06-07",
+      "stops": null,
+      "source": "FlightsFinder — NON-QUALIFYING PROVISIONAL BENCHMARK; 39-day stay; London departure airport/airline/stops unverified, indicative only, not checkout-verified",
+      "url": "https://www.flightsfinder.com/en-gb/flights-hong-kong"
+    },
+    {
+      "checked_at": "2026-10-11 01:57 HKT",
+      "price_gbp": 341,
+      "airline": "Unspecified",
+      "departure": "2027-04-12",
+      "return": "2027-07-02",
+      "stops": null,
+      "source": "FlightsFinder — NON-QUALIFYING PROVISIONAL BENCHMARK; 81-day stay; London departure airport/airline/stops unverified, indicative only, not checkout-verified",
       "url": "https://www.flightsfinder.com/en-gb/flights-hong-kong"
     }
   ]
